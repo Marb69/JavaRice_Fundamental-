@@ -1,0 +1,59 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: sans-serif;
+    
+}
+
+
+.container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.modal{
+
+    background-color: aliceblue;
+    box-shadow: 0 5px 15px gray;
+    padding: 40px;
+    border-radius: 8px;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.btn-container{
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.open-btn{
+
+    padding: 14px 18px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+}
+#close-btn{
+
+    cursor: pointer;
+}
+
+.modal.open{
+
+    display: flex;
+}
+

@@ -1,0 +1,173 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: sans-serif;
+}
+
+
+.container{
+
+    max-width: 1900px;
+    margin-inline: auto;
+    padding: 20px;
+    
+}
+.cards{
+  
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,500px);
+
+    gap: 14px;
+}
+
+
+.card{
+
+    box-shadow: 0 14px 15px rgb(221, 219, 219);
+    border-radius: 10px;
+    border: 3px solid rgb(236, 224, 224);
+    background-color: #ffffff;
+    padding: 40px;
+}
+.first-card .content{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.first-card{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content .count{
+
+
+    font-weight: 550;
+    font-size: 4rem;
+    
+    
+}
+
+.content  .counter-btn{
+
+    padding: 14px 28px;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    border: none;
+    background-color: green;
+    color: #ffffff;
+}
+
+.content  .counter-btn:active{
+
+    background-color: darkgreen;
+}
+
+.second-card{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-card .content button{
+
+    padding: 14px 18px;
+    border-radius: 4px;
+    border:none;
+    color: #ffffff;
+
+}
+
+.second-card .content .text{
+
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+}
+.second-card .content .hide-btn{
+
+    background-color: black;
+}
+
+
+.second-card .content .text.hide{
+
+    
+    display: none;
+}
+
+.third-card{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-card .box-color{
+
+    width: 150px;
+    height: 200px;
+    border: 1px solid;
+    margin: 15px 0px;
+}
+
+.third-card .random-btn{
+
+    padding: 14px 18px;
+    background-color: blue;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.fourth{
+
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+
+}
+
+.form-container{
+
+    max-width:90%;
+    margin-inline: auto;
+
+}
+
+.form-container #input{
+
+    width: 100%;
+    padding: 14px 18px;
+}
+
+.form-container .btn-submit{
+
+    width: 100%;
+    padding: 14px 18px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: blue;
+    color: #ffffff;
+}
+
+.form-container .input-value{
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 10px;
+}

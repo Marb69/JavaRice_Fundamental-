@@ -1,0 +1,122 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: sans-serif;
+}
+
+.container{
+
+    margin-inline: auto;
+    max-width: 1500px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+
+}
+
+.list-container{
+
+      
+    height:900px;
+    width: 900px;
+    box-shadow: 0 5px 16px rgb(218, 217, 217);
+    padding: 30px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,400px);
+    gap: 14px;
+}
+
+.form-contianer{
+
+    padding: 25px;
+}
+
+
+.Table,td,th{
+
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 4px;
+}
+
+.Table{
+
+    grid-column: span 2;
+}
+
+
+.input-group{
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.input-group label{
+
+    font-weight: 500;
+    color: rgb(46, 45, 45);
+}
+.input-group input{
+
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    background-color: #ffffff;
+    
+}
+
+.input-group #submit-btn{
+
+      background-color: blue;
+      color: #ffffff;
+      margin-top: 12px;
+      cursor: pointer;
+}
+
+.box-container{
+
+    padding: 40px;
+
+}
+
+.box-container .box{
+
+    
+    box-shadow: 0 5px 15px rgb(212, 210, 210);
+        border-radius: 8px;
+        width: 300px;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        color: rgb(105, 98, 98);
+
+}
+
+.box .count{
+
+    font-weight: 600;
+    font-size: 6.8rem;
+}
+
+.box svg{
+
+    width: 60px;
+    height: 60px;
+}
+
+

@@ -1,0 +1,144 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Poppins',sans-serif;
+
+}
+
+.container{
+
+    padding: 18px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.to-do-wrapper{
+
+
+    height: 70vh;
+    width: 530px;
+    padding: 40px;
+    background-color: rgb(236, 231, 231);
+    border-radius: 8px;
+    box-shadow: 0 5px 14px rgb(219, 218, 218);
+}
+
+.to-do-wrapper .title{
+
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 14px;
+    color: #696666;
+}
+
+.input-group{
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.input-group input{
+
+
+    padding: 12px 14px;
+    flex: 4;
+    border: 1px solid rgb(219, 214, 214);
+    box-shadow: 0 2px 12px rgb(230, 227, 227);
+    border-radius: 4px;
+    background-color: rgb(219, 214, 214);
+ 
+}
+
+.input-group button{
+
+    flex: 1;
+     padding: 11px;
+     border: none;
+     background-color: blue;
+     color: #ffffff;
+     box-shadow: 0 2px 12px rgb(236, 236, 236);
+     border-radius: 4px;
+     transition: all ease-in-out .3s;
+}
+.input-group button:hover{
+
+    background-color: rgba(0, 0, 255, 0.466);
+}
+.list-wrapper{
+
+    padding: 14px;
+    overflow-y: auto;
+}
+
+.list-wrapper ul{
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.list-wrapper ul li{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.list-wrapper ul li button{
+
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    transition: all ease-in-out .3s;
+}
+
+.list-wrapper ul li .delete{
+
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.list-wrapper ul li .delete:hover{
+
+    background-color: rgba(255, 0, 0, 0.61);
+}
+
+.list-wrapper ul li .mark{
+
+     background-color: green;
+     color: #ffffff;
+}
+
+.list-wrapper ul li .mark:hover{
+
+    background-color: rgba(0, 128, 0, 0.651);
+}
+
+.action{
+
+    display: flex;
+    gap: 4px;
+}
+
+.list-wrapper ul li .text.marks::after{
+
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 4px;
+    background-color: #696666;
+    top: 18px;
+    left: 0;
+}
