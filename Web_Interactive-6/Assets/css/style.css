@@ -43,13 +43,22 @@ aside{
 
 
   height: 100vh;
-  background-color: #e7e4e47e;
+  background-color: #e7e4e4;
   padding: 18px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  border-right: 1px solid rgba(221, 215, 215, 0.733);
+  border-right: 1px solid rgb(221, 215, 215);
   position: fixed;
+  transition: all ease-in-out .2s;
+   
+}
+
+.nav.toggle-open{
+
+   width: 70%;
+   left: 0;
+   z-index: 999;
 }
 
 .navlink{
@@ -74,12 +83,17 @@ aside{
 }
 .navlink li a{
 
-  display: block;
+
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
   color: #252424;
   display: none;
+}
+
+.navlink li .link.toggle-open{
+
+  display: block;
 }
 
 header{
@@ -165,6 +179,7 @@ main .container{
 .product-list-table th,td{
 
   padding: 8px 14px;
+  text-align: start;
   
 }
 
@@ -198,6 +213,12 @@ main .container{
     color: #fff9f9;
    position: sticky;
    top: 0;
+}
+
+.product-stock-table  th,td{
+
+  padding: 8px 14px;
+   text-align: start;
 }
 
 .stock-product-table{
@@ -242,10 +263,88 @@ footer{
 @media (min-width:769px){
 
 
+      .stats{
+
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .add-btn-container{
+
+        display: flex;
+        justify-content: start;
+        
+      }
+
+      .add-product-btn{
+
+        width: auto;
+      }
+
 }
 
 @media (min-width:1024px){
 
 
+
+  
+  .layout{
+
+      grid-template-columns: 250px 1fr;
+  }
+
+
+  .container{
+
+    max-width: 1700px;
+    margin-right: auto;
+  }
+   .stats{
+
+       grid-template-columns: repeat(4,1fr);
+       
+   }
+
+
+
+   .nav{
+
+    position: static;
+   
+   }
+   .navlink li a{
+
+       display: block;
+   }
+
+   .navlink{
+
+    margin-top: 74px;
+   }
+   #menu-btn{
+
+    display: none;
+   }
+
+   .stock-product-table{
+
+    flex-direction: row;
+    
+   }
+
+   .left-table-wrapper{
+
+    flex: 2;
+   }
+
+   .low-stock-wrapper{
+
+    flex: 1;
+    margin-top: 81px;
+   }
+
+   .add-product-btn{
+
+     
+   }
 
 }

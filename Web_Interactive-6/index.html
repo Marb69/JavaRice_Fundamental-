@@ -10,11 +10,48 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="Assets/css/modal.css">
     <title>Dashboard</title>
 </head>
 
 <body>
 
+
+    <div class="modal">
+
+        <div class="exit-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-x-icon lucide-x">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+            </svg>
+        </div>
+
+
+        <div class="form-container">
+
+            <div class="input-group">
+                <label for="pname" class="label">Product Name</label>
+                <input type="text" id="pname" placeholder="Enter Product Name">
+
+            </div>
+            <div class="input-group">
+                <label for="price" class="label">Product Price</label>
+                <input type="text" id="price" placeholder="Enter Product Price">
+
+            </div>
+            <div class="input-group">
+                <label for="stock" class="label">Product Stock</label>
+                <input type="text" id="stock" placeholder="Enter Product Stock">
+
+            </div>
+            <div class="input-group">
+                <button class="submit-btn">Submit</button>
+
+            </div>
+        </div>
+    </div>
 
 
     <div class="layout">
@@ -49,7 +86,8 @@
                         </div>
                         <a href="" class="link">Dashboard</a>
                     </li>
-                    <li>  <div class="icon">
+                    <li>
+                        <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -60,8 +98,10 @@
                                 <rect width="7" height="5" x="3" y="16" rx="1" />
                             </svg>
                         </div>
-                        <a href="" class="link">Dashboard</a></li>
-                    <li>  <div class="icon">
+                        <a href="" class="link">Dashboard</a>
+                    </li>
+                    <li>
+                        <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -72,8 +112,10 @@
                                 <rect width="7" height="5" x="3" y="16" rx="1" />
                             </svg>
                         </div>
-                        <a href="" class="link">Dashboard</a></li>
-                    <li>  <div class="icon">
+                        <a href="" class="link">Dashboard</a>
+                    </li>
+                    <li>
+                        <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -84,7 +126,8 @@
                                 <rect width="7" height="5" x="3" y="16" rx="1" />
                             </svg>
                         </div>
-                        <a href="" class="link">Dashboard</a></li>
+                        <a href="" class="link">Dashboard</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -105,6 +148,9 @@
         <main>
 
 
+
+
+
             <div class="container main">
 
 
@@ -113,118 +159,120 @@
 
                     <div class="stat-card">
 
-                       <span class="stat-title">
-                       Total Product
-                       </span>
+                        <span class="stat-title">
+                            Total Product
+                        </span>
 
-                       <span class="stat-value">
-                        30
-                       </span>
-                        
+                        <span class="stat-value">
+                            30
+                        </span>
+
                     </div>
 
-                     <div class="stat-card">
+                    <div class="stat-card">
 
-                       <span class="stat-title">
-                        Low Stock
-                       </span>
+                        <span class="stat-title">
+                            Low Stock
+                        </span>
 
-                       <span class="stat-value">
-                        4
-                       </span>
-                        
+                        <span class="stat-value">
+                            4
+                        </span>
+
                     </div>
 
-                     <div class="stat-card">
+                    <div class="stat-card">
 
-                       <span class="stat-title">
-                        Sales Today
-                       </span>
+                        <span class="stat-title">
+                            Sales Today
+                        </span>
 
-                       <span class="stat-value">
-                        ₱1,200
-                       </span>
-                        
+                        <span class="stat-value">
+                            ₱1,200
+                        </span>
+
                     </div>
 
-                     <div class="stat-card">
+                    <div class="stat-card">
 
-                       <span class="stat-title">
-                       Revenue
-                       </span>
+                        <span class="stat-title">
+                            Revenue
+                        </span>
 
-                       <span class="stat-value">
-                        ₱5,200
-                       </span>
-                        
+                        <span class="stat-value">
+                            ₱5,200
+                        </span>
+
                     </div>
                 </div>
 
 
-             <div class="stock-product-table">
+                <div class="stock-product-table">
 
-                  <div class="left-table-wrapper">
+                    <div class="left-table-wrapper">
 
-                     <button class="add-product-btn">
-                        Add Product
-                    </button>
-                     
-                    
-                   <div class="table-wrapper">
-
-                     
-                      <table class="product-list-table">
+                        <div class="add-btn-container">
+                            <button class="add-product-btn">
+                                Add Product
+                            </button>
+                        </div>
 
 
-                        <thead>
-                            <th>Product Name</th>
-                            <th>Price</th>
-                            <th>Stock</th>
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>Pancit Cantoon</td>
-                                <td>14.5</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Pancit Cantoon</td>
-                                <td>14.5</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Pancit Cantoon</td>
-                                <td>14.5</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Pancit Cantoon</td>
-                                <td>14.5</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Pancit Cantoon</td>
-                                <td>14.5</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>Pancit Cantoon</td>
-                                <td>14.5</td>
-                                <td>3</td>
-                            </tr>
-
-                        </tbody>
+                        <div class="table-wrapper">
 
 
-                          
-                      </table>
-                </div>
-                </div>
-                
+                            <table class="product-list-table">
 
-                     <div class="low-stock-wrapper">
+
+                                <thead>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>Pancit Cantoon</td>
+                                        <td>14.5</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pancit Cantoon</td>
+                                        <td>14.5</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pancit Cantoon</td>
+                                        <td>14.5</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pancit Cantoon</td>
+                                        <td>14.5</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pancit Cantoon</td>
+                                        <td>14.5</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pancit Cantoon</td>
+                                        <td>14.5</td>
+                                        <td>3</td>
+                                    </tr>
+
+                                </tbody>
+
+
+
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div class="low-stock-wrapper">
 
                         <table class="product-stock-table">
 
@@ -240,53 +288,56 @@
                                     <td>3</td>
                                 </tr>
 
-                                  <tr>
+                                <tr>
                                     <td>Pancit Cantoon</td>
                                     <td>3</td>
                                 </tr>
 
-                                  <tr>
+                                <tr>
                                     <td>Pancit Cantoon</td>
                                     <td>3</td>
                                 </tr>
-                                  <tr>
+                                <tr>
                                     <td>Pancit Cantoon</td>
                                     <td>3</td>
                                 </tr>
-                                  <tr>
+                                <tr>
                                     <td>Pancit Cantoon</td>
                                     <td>3</td>
                                 </tr>
-                                  <tr>
+                                <tr>
                                     <td>Pancit Cantoon</td>
                                     <td>3</td>
                                 </tr>
-                                  <tr>
+                                <tr>
                                     <td>Pancit Cantoon</td>
                                     <td>3</td>
                                 </tr>
-                                  <tr>
+                                <tr>
                                     <td>Pancit Cantoon</td>
                                     <td>3</td>
                                 </tr>
                             </tbody>
                         </table>
-                     </div>
-            
+                    </div>
 
 
-             </div>
-                
+
+                </div>
+
 
             </div>
 
 
         </main>
 
-     
+
 
     </div>
 
+
+
+    <script src="Assets/js/main.js" type="module"></script>
 </body>
 
 </html>
