@@ -1,0 +1,141 @@
+header{
+
+    height: 50px;
+}
+
+.container {
+  padding: 14px 18px;
+  margin-inline: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  padding: 14px 18px;
+}
+
+#menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#menu-icon .bar {
+  width: 24px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: gray;
+  transition: all ease-in-out .3s;
+}
+
+.navbrand {
+  font-weight: 500;
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: black;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -9999px;
+  background-color: rgb(236, 236, 236);
+  top: 0;
+  padding: 14px 18px;
+  width: 70%;
+  height: 100vh;
+  gap: 14px;
+  align-items: start;
+  z-index: 999;
+  transition: all ease-in-out .3s;
+}
+
+.nav.nav-toggle{
+
+    left: 0;
+}
+
+.nav .contact-btn {
+  padding: 14px 18px;
+  text-decoration: none;
+  display: block;
+  background-color: rgb(66, 64, 64);
+  color: white;
+  border-radius: 4px;
+}
+
+.navlink {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.navlink li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+
+
+#menu-icon .bar:nth-child(1).toggle-menu {
+  transform: rotate(-45deg) translateY(10px);
+}
+#menu-icon .bar:nth-child(2).toggle-menu {
+  opacity: 0;
+}
+#menu-icon .bar:nth-child(3).toggle-menu {
+  transform: rotate(45deg) translateY(-9px);
+}
+
+@media (min-width: 769px) {
+
+    
+}
+
+@media (min-width: 1024px) {
+
+    .navbar{
+
+        margin-inline:auto;
+        max-width: 1800px;
+    }
+  .nav {
+    
+     position: static;
+     background-color: transparent;
+     flex-direction: row;
+     align-items: center;
+     height: auto;
+     justify-content: end;
+     gap: 34px;
+     transition: none;
+  }
+
+  .navlink {
+
+     flex-direction: row;
+    gap: 34px;
+   
+  }
+
+    .navlink li a{
+
+        font-size: 1.2rem;
+    }
+
+  #menu-icon {
+    display: none;
+  }
+
+ 
+}
