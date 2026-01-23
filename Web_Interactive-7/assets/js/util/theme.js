@@ -1,100 +1,40 @@
-export function theme(){
+export function theme() {
+  const ImagesPath = {
+    FirstImage: "Assets/image/hero1.jpg",
+    SeconImage: "Assets/image/hero2.png",
+  };
 
+  const ImgList = [];
 
+  const ClickThisBtn = document.querySelector("#click-this");
+  const ChangeThemeBtn = document.querySelector("#change-theme");
+  const ImageWrapper = document.querySelector(".image");
 
-    const ImagesPath = {
+  const ElemImg1 = document.createElement("img");
+  const ElemImg2 = document.createElement("img");
 
-            FirstImage:'Assets/image/hero1.jpg',
-            SeconImage:'Assets/image/hero2.png'
-    }
+  ImageWrapper.appendChild(ElemImg1);
+  ImageWrapper.appendChild(ElemImg2);
 
-    const ImgList = [];
+  ElemImg1.src = ImagesPath.FirstImage;
+  ElemImg2.src = ImagesPath.SeconImage;
 
-    const ClickThisBtn = document.querySelector('#click-this');
-    const ChangeThemeBtn = document.querySelector('#change-theme');
-    const ImageWrapper = document.querySelector('.image');
+  ImgList.push(ElemImg1, ElemImg2);
+  ElemImg1.classList.add("render");
 
-    const ElemImg1 = document.createElement('img');
-    const ElemImg2 = document.createElement('img');
+  ImgList.forEach((img) => {
+    img.classList.add("img");
+  });
 
-    ImageWrapper.appendChild(ElemImg1);
-    ImageWrapper.appendChild(ElemImg2);
-
-    ElemImg1.src = ImagesPath.FirstImage;
-    ElemImg2.src = ImagesPath.SeconImage;
-
-
-    ImgList.push(ElemImg1,ElemImg2);
-    ElemImg1.classList.add('render');
-
-    ImgList.forEach((img)=>{
-
-        img.classList.add('img');
-    })
-
-
-  
-
-    ClickThisBtn.addEventListener('click',()=>{
-
-
-      
-    ImgList.forEach((img)=>{
-
-       
-        if(img.classList.contains('render')){
-
-            img.classList.remove('render');
-             
-        }else{
-
-            img.classList.add('render');
-           
-        }
-         
-        
+  ClickThisBtn.addEventListener("click", () => {
+    ImgList.forEach((img) => {
+      if (img.classList.contains("render")) {
+        img.classList.remove("render");
+      } else {
+        img.classList.add("render");
+      }
     });
+  });
 
-
-         
-    });
-
-
-
-    const TextChange = document.querySelector('.text-change');
-
-
-
-
-     
-
-
-
-
-                setInterval(()=>{
-
-
-        if(TextChange.innerHTML = 'This Text Change Every Seconds'){
-                        
-            TextChange.innerHTML = 'Diba Ni Change HAHAHA';
-                    }else{
-
-                        TextChange.innerHTML = "This Text Change Every Seconds";
-                    }
-        },3000);
-
-    
-   
-
-
-        
-
-    
- 
-     
-    
-    
-
-   
-
+  const TextChange = document.querySelector(".text-change");
 }

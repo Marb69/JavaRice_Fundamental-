@@ -1,6 +1,5 @@
-header{
-
-    height: 50px;
+header {
+  height: 50px;
 }
 
 .container {
@@ -32,7 +31,7 @@ header{
   height: 3px;
   border-radius: 3px;
   background-color: gray;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
 
 .navbrand {
@@ -55,12 +54,11 @@ header{
   gap: 14px;
   align-items: start;
   z-index: 999;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
 
-.nav.nav-toggle{
-
-    left: 0;
+.nav.nav-toggle {
+  left: 0;
 }
 
 .nav .contact-btn {
@@ -85,8 +83,6 @@ header{
   color: black;
 }
 
-
-
 #menu-icon .bar:nth-child(1).toggle-menu {
   transform: rotate(-45deg) translateY(10px);
 }
@@ -98,44 +94,34 @@ header{
 }
 
 @media (min-width: 769px) {
-
-    
 }
 
 @media (min-width: 1024px) {
-
-    .navbar{
-
-        margin-inline:auto;
-        max-width: 1800px;
-    }
+  .navbar {
+    margin-inline: auto;
+    max-width: 1800px;
+  }
   .nav {
-    
-     position: static;
-     background-color: transparent;
-     flex-direction: row;
-     align-items: center;
-     height: auto;
-     justify-content: end;
-     gap: 34px;
-     transition: none;
+    position: static;
+    background-color: transparent;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    justify-content: end;
+    gap: 34px;
+    transition: none;
   }
 
   .navlink {
-
-     flex-direction: row;
+    flex-direction: row;
     gap: 34px;
-   
   }
 
-    .navlink li a{
-
-        font-size: 1.2rem;
-    }
+  .navlink li a {
+    font-size: 1.2rem;
+  }
 
   #menu-icon {
     display: none;
   }
-
- 
 }

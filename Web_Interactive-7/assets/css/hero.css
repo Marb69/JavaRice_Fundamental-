@@ -67,8 +67,11 @@
  
     opacity: 1;
     display: block;
-   
+   animation: scalling normal;
+    transition: all ease-in-out .3s;
 }
+
+
 
 
 

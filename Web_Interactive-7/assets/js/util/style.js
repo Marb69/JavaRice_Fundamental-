@@ -3,35 +3,33 @@ export function StyleLoader() {
     NavPath: "Assets/css/nav.css",
     MainPath: "Assets/css/main.css",
     HeroPath: "Assets/css/hero.css",
+    ServicePath: "Assets/css/services.css",
+
     Rel: "Stylesheet",
   };
 
   let LinkList = [];
-
-
 
   const HtmlHead = document.querySelector("head");
 
   const Navtyle = document.createElement("link");
   const MainStyle = document.createElement("link");
   const HeroStyle = document.createElement("link");
+  const ServiceStyle = document.createElement("link");
 
   const linkMain = HtmlHead.appendChild(MainStyle);
   const linkNavHtml = HtmlHead.appendChild(Navtyle);
   const linkHero = HtmlHead.appendChild(HeroStyle);
+  const linkServices = HtmlHead.appendChild(ServiceStyle);
 
-  LinkList.push(linkHero,linkNavHtml,linkMain);
-  
-  
- 
+  LinkList.push(linkHero, linkNavHtml, linkMain, linkServices);
+
   for (let index = 0; index < LinkList.length; index++) {
-    
     LinkList[index].rel = StylePath.Rel;
-    
   }
-
 
   Navtyle.href = StylePath.NavPath;
   MainStyle.href = StylePath.MainPath;
   HeroStyle.href = StylePath.HeroPath;
+  ServiceStyle.href = StylePath.ServicePath;
 }
