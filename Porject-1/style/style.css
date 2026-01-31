@@ -1,0 +1,138 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-color: #005461;
+    font-family: 'mooli',sans-serif;
+}
+
+.container{
+
+    padding: 18px;
+    margin-inline: auto;
+
+}
+
+.to-do{
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+   
+
+}
+
+.to-do-container{
+
+     width: 100%;
+    background-color: #1E1E1E;
+    padding: 40px;
+    position: relative;
+    min-height: 80vh;
+    border-radius: 8px;
+}
+
+
+
+.to-do-container .title {
+
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+    display: block;
+    color: #005461;
+    font-weight: 500;
+}
+
+.to-do-container .search-bar input{
+
+    width: 100%;
+    padding: 12px 14px;
+    background-color: #005461;
+    border: none;
+    border-radius: 4px;
+    color: #3BC1A8;
+}
+.search-bar{
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 13px;
+
+}
+
+.to-do-container .search-bar .search-icon i{
+
+    font-size: 27px;
+    color:#005461 ;
+}
+
+.task-list{
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 14px;
+}
+.task-list .task{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+    align-items: center;
+  
+}
+
+#task-title{
+
+    background-color: #00546159;
+    padding: 12px 15px;
+    width: 100%;
+    border-radius: 4px;
+    color: #3bc1a886;
+}
+
+#delete-icon{
+
+    font-size: 27px;
+}
+
+.task-list .task .task-label{
+
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    gap: 14px;
+
+}
+
+
+.task-list .task .delete-icon{
+
+
+}
+@media (min-width:769px) {
+    
+
+    .container{
+
+        max-width: 800px;
+    }
+}
+
+
+@media (min-width:1024px) {
+    
+
+    .container{
+
+        max-width: 1600px;
+    }
+}
