@@ -1,138 +1,254 @@
-*{
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-
-    background-color: #005461;
-    font-family: 'mooli',sans-serif;
+body {
+  background-color: #005461;
+  font-family: "mooli", sans-serif;
 }
 
-.container{
-
-    padding: 18px;
-    margin-inline: auto;
-
+.container {
+  padding: 18px;
+  margin-inline: auto;
 }
 
-.to-do{
-
-    height: 100vh;
-    display: flex;
-    align-items: center;
-   
-
+.to-do {
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-.to-do-container{
-
-     width: 100%;
-    background-color: #1E1E1E;
-    padding: 40px;
-    position: relative;
-    min-height: 80vh;
-    border-radius: 8px;
+.to-do-container {
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 40px;
+  position: relative;
+  min-height: 80vh;
+  border-radius: 8px;
 }
-
-
 
 .to-do-container .title {
-
-    font-size: 1.6rem;
-    margin-bottom: 14px;
-    display: block;
-    color: #005461;
-    font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  display: block;
+  color: #005461;
+  font-weight: 500;
 }
 
-.to-do-container .search-bar input{
+.to-do-container .search-bar input {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #005461;
+  border: none;
+  border-radius: 4px;
+  color: #3bc1a8;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 13px;
+}
 
-    width: 100%;
-    padding: 12px 14px;
+.to-do-container .search-bar .search-icon i {
+  font-size: 27px;
+  color: #005461;
+  cursor: pointer;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
+  overflow-y: auto;
+  max-height: 800px;
+}
+.task-list .task {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 11px;
+  align-items: center;
+}
+
+#task-title {
+  background-color: #00546159;
+  padding: 12px 15px;
+  width: 100%;
+  border-radius: 4px;
+  color: #3bc1a886;
+}
+
+#checkbox {
+  display: none;
+}
+
+.mark-done {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  border: solid 1px #005461;
+}
+
+.mark-done input:checked + .checkmark {
+  border-color: #3bc1a8;
+}
+
+.mark-done input:checked + .checkmark::after {
+  content: "✔";
+  color: #3bc1a8;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#delete-icon {
+  font-size: 30px;
+  color: #b76767;
+  cursor: pointer;
+}
+
+.task-list .task .task-label {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  gap: 14px;
+}
+
+#add-task {
+  position: absolute;
+  font-size: 20px;
+  color: #3bc1a8;
+  background-color: #005461;
+  padding: 10px 14px;
+  bottom: 50px;
+  right: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#modal{
+
+    position: absolute;
+    
+    padding: 30px;
     background-color: #005461;
-    border: none;
+    top: -999px;
+    left: 50%;
+    transform: translate(-50%,-50%);
     border-radius: 4px;
-    color: #3BC1A8;
-}
-.search-bar{
-
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 13px;
-
+    transition: all .3s ease-in-out;
+    min-width: 350px;
+    
 }
 
-.to-do-container .search-bar .search-icon i{
+#modal.toggle{
 
-    font-size: 27px;
-    color:#005461 ;
+    top: 30%;
 }
 
-.task-list{
+#exit{
+
+    position: absolute;
+    color: #3bc1a8;
+    right: 30px;
+    font-size: 1.3rem;
+    top: 15px;
+    cursor: pointer;
+}
+
+#modal .form{
 
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-top: 14px;
-}
-.task-list .task{
-
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 24px;
-    align-items: center;
-  
+    
 }
 
-#task-title{
+#modal .form  span{
 
-    background-color: #00546159;
-    padding: 12px 15px;
-    width: 100%;
+    font-size: 1.2rem;
+    color: #3bc1a8;
+}
+#modal .form input{
+
+    padding: 11px 14px;
+    background-color: #1e1e1e;
+    border: none;
+    color: #3bc1a8;
     border-radius: 4px;
-    color: #3bc1a886;
+}
+#add-sub{
+
+    padding: 11px 14px;
+    background-color: #3bc1a8;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
 }
 
-#delete-icon{
+@media (min-width: 769px) {
+  .container {
+    max-width: 800px;
+  }
 
-    font-size: 27px;
+  #modal{
+
+    min-width: 540px;
+  }
 }
 
-.task-list .task .task-label{
-
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    align-items: center;
-    gap: 14px;
-
+::-webkit-scrollbar {
+  display: none;
 }
 
-
-.task-list .task .delete-icon{
-
-
-}
-@media (min-width:769px) {
-    
-
-    .container{
-
-        max-width: 800px;
-    }
+/* Firefox */
+* {
+  scrollbar-width: none;
 }
 
+/* IE / old Edge */
+* {
+  -ms-overflow-style: none;
+}
 
-@media (min-width:1024px) {
-    
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1600px;
+  }
 
-    .container{
+  .to-do-container .title {
+    font-size: 3rem;
+  }
 
-        max-width: 1600px;
-    }
+  .to-do-container .search-bar input {
+    font-size: 1.3rem;
+  }
+
+  .task-title {
+    font-size: 1.1rem;
+  }
+
+  #add-task{
+
+    font-size: 32px;
+    padding: 10px 16px;
+  }
+
+  #modal{
+
+    min-width: 840px;
+  }
 }
