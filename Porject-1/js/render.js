@@ -1,30 +1,27 @@
 
-import { Task } from "./addtask.js";
-import { GetTask } from "./storage.js";
-import { template } from "./task.js";
-
-export function render(){
-
-    const taskTable =document.querySelector('.task-list');
-
-    taskTable.innerHTML = '';
-
-  
-
-        let TaskData = GetTask();
+import { TaskWrapper } from "./main.js";
+import { GetItem } from "./storage.js";
 
 
-       TaskData.forEach((task,index) => {
-        
-         
-       taskTable.innerHTML +=  template(task,index);
-       
 
-     
-     
-           
-       });
+export function render() {
 
-    
+
+
+
+TaskWrapper.innerHTML = '';
+
+  GetItem().forEach(item =>{
+
+
+             TaskWrapper.innerHTML += `<div class="task">
+                                <span id="task-title">${item.task}</span>
+                                <i class="fa-solid fa-trash delete-icon" data-id="${item.id} "></i>
+                                
+                            </div>`;
+
+  });
+
+
 
 }

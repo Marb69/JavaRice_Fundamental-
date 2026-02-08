@@ -1,40 +1,37 @@
-const array = ["APPLE", "Manga", "You", "Mango", "Hayop", "ka"];
+let arry = [
 
-const ul = document.querySelector("ul");
-const input = document.querySelector("input");
 
-input.addEventListener("input", () => {
-  let inputValue = input.value;
-  ul.innerHTML = "";
+  {
 
-  let filtered =
-    array.filter((item) =>
-      item.toLowerCase().includes(inputValue.toLowerCase()),
-    ) || [];
-
-  filtered.forEach((item) => {
-    const li = document.createElement("li");
-    ul.append(li);
-    li.innerText = item;
-  });
-
-  if (filtered.length == 0) {
-    return ul.append(
-      (document.createElement('span').innerTEx = "No Data Found!"),
-    );
+    id:1,
+    item:"Mangga"
   }
-});
+   
+]
 
-function render() {
-  if (ul.innerHTML == 0) {
-    array.forEach((item) => {
-      const li = document.createElement("li");
-      ul.append(li);
-      li.innerText = item;
-    });
+arry.push({
 
-    return;
-  }
-}
+   id:2,
+   item:'Apple'
+})
 
-render();
+
+arry.push({
+
+   id:3,
+   item:'Tao'
+})
+
+
+
+let updated = arry.filter(item=>item.id !== 1);
+
+
+
+
+
+
+localStorage.setItem('task',JSON.stringify(updated));
+
+
+console.log(JSON.parse(localStorage.getItem('task')) || [])

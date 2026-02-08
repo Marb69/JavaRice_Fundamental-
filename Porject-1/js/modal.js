@@ -1,36 +1,24 @@
-import { Task } from "./addtask.js";
-import { render } from "./render.js";
-import { GetTask } from "./storage.js";
+import { AddBtn, ExitBtn, Modal, SaveBtn } from "./main.js";
 
 export function modal(){
 
-
-     const modal = document.querySelector('#modal');
-     const OpenBtn = document.querySelector('#add-task');
-     const CloseBtn = document.querySelector('#exit');
-     const AddBtn = document.querySelector("#add-sub");
-
-     OpenBtn.addEventListener('click',()=>{
-
-          modal.classList.add('toggle');
-     
-
-         
-     
-     })
-
-     CloseBtn.addEventListener('click',()=>{
-
-          modal.classList.remove('toggle');
-
-     })
-
-   AddBtn.addEventListener('click',()=>{
-
-     modal.classList.remove('toggle');
-       render();
-   
-    
-   })
  
+      
+      AddBtn.addEventListener('click',()=>{
+
+        Modal.classList.add('toggle');
+
+      })
+
+      ExitBtn.addEventListener('click',()=>{
+
+        Modal.classList.remove('toggle');
+      })
+
+     SaveBtn.addEventListener('click',()=>{
+
+        Modal.classList.remove('toggle');
+     })
+
+
 }
