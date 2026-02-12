@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import HamMenu from './HamMenu.jsx'
+import Nav from './nav.jsx'
 
 const header = () => {
+ const [toggle,setToggle] = useState(false);
+  
+
   return (
    
-       <header>
+       <header className='fixed top-0 w-full backdrop:blur-3xl h-8 '>
 
-         <a href="" className='text-3xl font-bold text-gray-700'>Halo</a>
+          <div className="flex mx-auto px-3 py-2 items-center justify-between lg:max-w-7xl">
+
+            <a href="" className='font-bold text-2xl text-orange-400'>Tara-Luto</a>
+
+            <HamMenu toggle={toggle} setToggle={setToggle} ></HamMenu>
+
+            <Nav toggle={toggle}></Nav>
+
+          </div>
      </header>
   )
 }

@@ -1,15 +1,12 @@
 import React from 'react'
-import header from './header'
-
-const layout = () => {
+import Header from './Header.jsx'
+const Layout = () => {
   return (
-    <div className='flex fle'>
-
-        <header/>
-
-      
-    </div>
+   
+      <>
+          <Header/>
+      </>
   )
 }
 
-export default layout
+export default Layout
