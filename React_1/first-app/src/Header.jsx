@@ -10,9 +10,10 @@ const header = () => {
    
        <header className='fixed top-0 w-full backdrop:blur-3xl h-8 '>
 
-          <div className="flex mx-auto px-3 py-2 items-center justify-between lg:max-w-7xl">
+          <div className="flex mx-auto px-3 py-2 items-center justify-between lg:max-w-7xl lg:justify-normal
+          ">
 
-            <a href="" className='font-bold text-2xl text-orange-400'>Tara-Luto</a>
+            <a href="" className='font-bold text-2xl text-Primary lg:text-3xl '>Tara-Luto</a>
 
             <HamMenu toggle={toggle} setToggle={setToggle} ></HamMenu>
 

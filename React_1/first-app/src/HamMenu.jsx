@@ -15,9 +15,9 @@ const HamMenu = ({toggle,setToggle}) => {
                    
             }}>
                  
-                 <div className={`w-7 h-1 rounded bg-yellow-700 ${toggle ? "rotate-45 translate-y-2.5" : ""}` }></div>
-                  <div className={`w-7 h-1 rounded bg-yellow-700 ${toggle ? "opacity-0" : ""} `}></div>
-                   <div className={`w-7 h-1 rounded bg-yellow-700 ${toggle ? "-rotate-45 -translate-y-1.5" : ""}`}></div>
+                 <div className={`w-7 h-1 rounded bg-Dark ${toggle ? "rotate-45 translate-y-2.5" : ""}` }></div>
+                  <div className={`w-7 h-1 rounded bg-Dark ${toggle ? "opacity-0" : ""} `}></div>
+                   <div className={`w-7 h-1 rounded bg-Dark ${toggle ? "-rotate-45 -translate-y-1.5" : ""}`}></div>
             </div>
   )
 }
