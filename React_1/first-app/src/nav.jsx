@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button.jsx";
+import { NavLink } from "react-router-dom";
 
 const Nav = ({ toggle }) => {
   return (
@@ -18,19 +19,29 @@ const Nav = ({ toggle }) => {
 
       <ul className="flex flex-col list-non mb-10 gap-4.5 mt-10 font-medium text-Dark lg:flex-row lg:m-auto lg:gap-6 ">
         <li>
-          <a href="">Home</a>
+          <NavLink to="/">
+            <a>Home</a>
+          </NavLink>
         </li>
         <li>
-          <a href="">Recipe</a>
+          <NavLink to="/Recipe">
+            <a>Recipe</a>
+          </NavLink>
         </li>
         <li>
-          <a href="">Ph Foods</a>
+          <NavLink to="/PhFood">
+            <a>Ph Foods</a>
+          </NavLink>
         </li>
         <li>
-          <a href="">Gallery</a>
+          <NavLink to="/Gallery">
+            <a>Gallery</a>
+          </NavLink>
         </li>
         <li>
-          <a href="">About Us</a>
+          <NavLink to="/About">
+            <a>About</a>
+          </NavLink>
         </li>
       </ul>
 

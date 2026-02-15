@@ -1,13 +1,8 @@
-import React from 'react'
-import Layout from './Layout.jsx'
-
+import React from "react";
+import Layout from "./layout";
 
 const App = () => {
-  return (
-    
+  return <Layout/>;
+};
 
-    <Layout/>
-  )
-}
-
-export default App
+export default App;
