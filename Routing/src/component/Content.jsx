@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 const Content = () => {
   return (
-    <div className='h-auto bg-neutral-50 w-full shadow rounded-2xl overflow-hidden '>
+    <div className='h-auto bg-neutral-50 w-full shadow rounded-2xl overflow-y-scroll scroll-smooth' >
 
         <Header/>
 
@@ -12,7 +12,7 @@ const Content = () => {
         <main>
 
            
-           <div className="p-3 container">
+           <div className="p-3 container  ">
                  
               <Outlet/>
 

@@ -4,8 +4,10 @@ import React from "react";
 const Dashboard = () => {
   return (
     <>
-      <div className="flex flex-col gap-4 p-2">
-        <div className="grid grid-cols-4 gap-5">
+      <div className="flex flex-col gap-4 p-2  ">
+
+
+        <div className="grid grid-cols-4 gap-5 transition-all ease-in-out ">
           <div className="p-5 bg-yellow-400 rounded-2xl min-h-50 shadow"></div>
           <div className="p-5 bg-green-500 rounded-2xl min-h-50 shadow"></div>
           <div className="p-5 bg-blue-500 rounded-2xl min-h-50 shadow"></div>
@@ -25,6 +27,10 @@ const Dashboard = () => {
 
           </div>
         </div>
+
+
+  
+
       </div>
     </>
   );
