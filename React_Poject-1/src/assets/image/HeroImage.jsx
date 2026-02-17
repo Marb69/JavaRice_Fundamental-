@@ -1,12 +1,11 @@
 import React from "react";
 
-const HeroImage = () => {
+const HeroImage = ({classname}) => {
   return (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="880.503"
-        height="522.591"
+        className={classname}
         viewBox="0 0 880.503 522.591"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         role="img"

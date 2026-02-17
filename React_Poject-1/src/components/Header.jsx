@@ -10,9 +10,9 @@ const Header = () => {
   return (
    
 
-     <header className='fixed w-full p-4 '>
+     <header className='fixed w-full p-4  '>
 
-           <div className="flex justify-between items-center">
+           <div className="flex justify-between items-center mx-auto lg:max-w-7xl">
                <a href="" className='font-bold text-3xl text-gray-900'>Jan.</a>
 
                <HamMenu toggle={toggle} setToggle={setToggle}/>
