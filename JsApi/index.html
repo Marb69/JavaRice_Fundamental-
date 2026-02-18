@@ -4,10 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
+
+
+     <div class="container">
+
+
+        <div class="input-container">
+
+             <header>
+
+                 <span class="title">FakeStore</span>
+             </header>
+
+             <div class="stat-form">
+                   
+                <div class="form">
+
+
+                 <div class="inpu-g">
+                    <label for="">Id</label>
+                    <input type="text" placeholder="Enter Id" id="ProductId">
+                 </div>
+                 <div class="inpu-g">
+                    <label for="">Title</label>
+                    <input type="text" placeholder="Enter Title" id="ProductTitle">
+                 </div>
+                 <div class="inpu-g">
+                    <label for="">Price</label>
+                    <input type="text" placeholder="Enter Price" id="ProductPrice">
+                 </div>
+                 <div class="inpu-g">
+                    <label for="">Description</label>
+                    <input type="text" placeholder="Enter Description" id="ProductDes">
+                 </div>
+                 <div class="inpu-g">
+                    <label for="">Category</label>
+                    <input type="text" placeholder="Enter Category" id="ProductCate">
+                 </div>
+                  <div class="inpu-g">
+                    <label for="">Image</label>
+                    <input type="file" placeholder="Enter Image" accept="image/*" id="ProductImage">
+                 </div>
+                 
+                 <div class="btn">
+                     <button id="AddProduct">Add product</button>
+
+                 </div>
+                     
+                </div>
+
+                <div class="stat ">
+
+                    
+                    <div class="card ProductCount">
+
+                         <span class="title-stat">All Product</span>
+                         <span id="ProductCount" class="count">0</span>
+
+                    </div>
+                      <div class="card UserCount">
+
+                         <span class="title-stat">All User</span>
+                         <span id="UserCount" class="count">0</span>
+
+                    </div>
+                      <div class="card Soon">
+
+                         <span class="title-stat">Soon..</span>
+                         <span id="Soon" class="count">0</span>
+
+                    </div> 
+                      <div class="card Expense">
+
+                         <span class="title-stat">Soon...</span>
+                         <span id="Expense" class="count">0</span>
+
+                    </div>
+
+                   
+                </div>
+                   
+             </div>
+              
+        </div>
+
+        <div class="product-container">
+
+
+             <span class="title">All Products</span>
+
+             <div class="products">
+                 
+
+               
+                  
+             </div>
+
+        </div>
+
+     </div>
 
 
 

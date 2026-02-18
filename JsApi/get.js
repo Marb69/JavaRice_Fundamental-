@@ -1,3 +1,4 @@
+import { Card } from "./RenderCard.js";
 import { url } from "./url.js";
 
 export function Get() {
@@ -13,7 +14,9 @@ export function Get() {
 
       const data = await res.json();
 
-      console.log(data);
+   
+      Card(data);
+      console.log(data)
     } catch (err) {
       console.log(err);
     }

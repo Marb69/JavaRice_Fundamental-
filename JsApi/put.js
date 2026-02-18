@@ -1,6 +1,6 @@
 import { url } from "./url.js";
 
-export function Put() {
+export function Put(id,title,) {
   async function put() {
     try {
       const res = await fetch(`${url}/1`, {

@@ -1,1 +1,1 @@
-export const url = "https://jsonplaceholder.typicode.com/posts";
+export const url = "https://fakestoreapi.com/products";

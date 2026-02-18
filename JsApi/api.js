@@ -6,7 +6,5 @@ import { Put } from "./put.js";
 export function api() {
   Get();
 
-  Post();
-  Put();
-  Delete();
+ 
 }

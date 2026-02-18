@@ -1,6 +1,6 @@
 import { url } from "./url.js";
 
-export function Post() {
+export function Post(id,title,price,des,cate,image) {
   async function fetching() {
     try {
       const res = await fetch(url, {
@@ -9,8 +9,12 @@ export function Post() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: "Hello Api",
-          id: 102,
+          id: id,
+          title: title,
+          price: price,
+          description: des,
+          category: cate,
+          image: image,
         }),
       });
 
