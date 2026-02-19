@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+
+        font-family: sans-serif;
+    }
+
+    .see-pass {
+
+        cursor: pointer;
+    }
+
+    #Form-Container {
+
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+</style>
+
+
+<body>
+
+
+
+    <form action="" id="Form-Container">
+
+
+        <input type="text" placeholder="Enter Email" id="Email">
+        <input type="password" placeholder="Enter Password" id="Password">
+        <p class="see-pass">See Password</p>
+        <button id="LogBtn" type="submit">Log in</button>
+    </form>
+
+
+    <p class="err-message"></p>
+
+    <script>
+
+
+        const ErrMsg = document.querySelector('.err-message');
+
+        const Form = document.querySelector('#Form-Container');
+
+        Form.addEventListener('submit', (e) => {
+
+            debugger
+            const Email = document.querySelector('#Email').value.trim();
+            const Password = document.querySelector('#Password').value.trim();
+            const SeePassBtn = document.querySelector('#see-pass');
+
+
+            e.preventDefault();
+
+
+            if (Password == '' || Email == '') {
+
+
+                ErrMsg.innerHTML = 'Please fiil the input Fields';
+
+
+                setInterval(() => {
+
+                    ErrMsg.innerHTML = '';
+                }, 3000)
+
+                return;
+            }
+
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!Email.match(emailPattern)){
+
+                
+                ErrMsg.innerHTML = 'Please enter a valid email!';
+
+
+                setInterval(() => {
+
+                    ErrMsg.innerHTML = '';
+                }, 3000)
+
+                return;
+
+            }
+
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>
