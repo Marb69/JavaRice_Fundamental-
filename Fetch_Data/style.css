@@ -1,0 +1,115 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+
+    font-family: 'Poppins';
+    padding: 40px;
+}
+
+.form-container{
+
+    padding: 25px;
+    background-color: rgb(231, 226, 226);
+    max-width: 300px;
+    min-width: 300px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#form .input-g {
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 11px;
+}
+#form .input-g input{
+
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    
+}
+
+#form button{
+
+    padding: 11px 12px;
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 4px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#form .input-g label{
+    
+    font-weight: 500;
+    color: rgb(97, 99, 99);
+}
+
+
+.container{
+
+     display: flex;
+     gap: 10px;
+}
+
+.table-wrapper table,th,td{
+
+     border: 1px solid gray;
+     border-collapse: collapse;
+     padding: 11px ;
+}
+.table-wrapper table{
+
+    background-color: white;
+
+}
+.table-wrapper table thead{
+
+    background-color: rgb(107, 105, 101);
+    color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+}
+
+.table-wrapper{
+
+    max-height: 250px;
+    overflow-y: scroll;
+
+   
+}
+.err-msg {
+
+    background-color: rgb(209, 203, 203);
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    
+}
+.err-msg p{
+
+    color: red;
+    font-weight: 500;
+
+}
+
+.err-container{
+
+    display: flex;
+    align-items: center;
+}
