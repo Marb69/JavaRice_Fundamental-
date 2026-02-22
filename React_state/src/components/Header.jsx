@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "./Nav.jsx";
 import { ShoppingCart } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,18 +12,22 @@ const Header = () => {
         </a>
 
         <div className="flex gap-5 ">
-
+          <NavLink >
+          
             <span>Signup</span>
+          </NavLink>
+          <NavLink >
+         
             <span>Log in</span>
+          </NavLink>
 
-            <span className="cursor-pointer">
-               <ShoppingCart />
-            </span>
+          <span className="cursor-pointer">
+            <ShoppingCart />
+          </span>
         </div>
+      </header>
 
-      </header >
-
-       <Nav />
+      <Nav />
     </div>
   );
 };
