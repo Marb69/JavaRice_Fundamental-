@@ -1,9 +1,13 @@
-import baseurl from "./api.js";
+import { temperatureDeg, temperatureNum } from "./main.js";
 
-const currentWeather = () => {
+
+const currentWeather = (lat,lon) => {
+
+
   const ApiFetch = async () => {
+
     try {
-      const res = await fetch(baseurl);
+      const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
 
       if (!res.ok) {
         console.log("Something Error in Fetching");
@@ -11,6 +15,9 @@ const currentWeather = () => {
 
       const data = await res.json();
 
+
+      temperatureNum.innerHTML = data.current_weather.temperature;
+      temperatureDeg.innerHTML = data.current_weather_units.temperature;
       console.log(data.current_weather.temperature + data.current_weather_units.temperature);
     } catch (error) {
 
