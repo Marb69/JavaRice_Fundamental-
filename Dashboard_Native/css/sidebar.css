@@ -1,0 +1,49 @@
+.brand{
+
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(54, 53, 48);
+}
+
+
+#sidebar{
+
+     background-color: rgb(218, 208, 208);
+     width: 300px;
+     padding: 30px;
+}
+
+#main{
+
+    background-color: rgb(238, 236, 236);
+    flex: 1;
+    
+} 
+
+
+.navbar{
+
+    margin-top: 30px;
+}
+
+.nav{
+
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav li{
+
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+.nav li:hover{
+
+    background-color: rgb(179, 177, 177);
+}

@@ -4,37 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
     <title>Klima</title>
 </head>
 
 <body>
 
+   
 
-    <div class="container-entry">
+     
+    <div class="container">
 
 
 
-        <div class="context-entry">
+        <div class="welcome">
 
-            <div class="welcome-text">
-                <span class="header">Welcome to <span class="brand">Klima</span></span>
-                <p class="subtext">Ikaw ba ay pinili na?</p>
+            
+            <div class="content">
+
+                <img src="assets/icon.png" alt="" class="image">
+
+                <div class="context">
+
+                    <h1 class="brand">Klima</h1>
+                    <p class="sub-brand">Ikaw ay pinili na ba?</p>
+
+                    <button class="check-btn" id="check-btn">Check Weather</button>
+                </div>
             </div>
 
-            <a id="check-weather-btn" href="weatherPage.html">Check Weather</a>
+              
+
         </div>
-
-
     </div>
 
 
-    <script type="module" src="js/main.js"></script>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

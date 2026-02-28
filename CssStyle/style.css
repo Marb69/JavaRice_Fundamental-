@@ -1,0 +1,53 @@
+body {
+  background: #0f2c4d;
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+  font-family: sans-serif;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* The Line */
+.stepper::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+  z-index: 0;
+}
+
+/* Each Step */
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* Active Step */
+.step.active .circle {
+  background: white;
+}
+
+.step p {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}

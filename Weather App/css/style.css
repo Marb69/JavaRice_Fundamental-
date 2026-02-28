@@ -5,112 +5,182 @@
 }
 
 body {
-  background-color: rgb(2, 2, 39);
-  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background: linear-gradient(rgb(19, 19, 236), rgb(14, 173, 165));
 }
 
-.container-entry {
-  padding: 25px;
-  height: 100vh;
-  align-content: center;
+.container {
   margin-inline: auto;
-  max-width: 470px;
-}
-
-.brand {
-  color: white;
-  font-weight: 700;
-  letter-spacing: 3px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-   background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.context-entry {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.welcome-text {
-  color: rgb(252, 239, 239);
-}
-
-.welcome-text .header {
-  font-size: 2rem;
-}
-
-.welcome-text .subtext {
-  color: rgb(209, 203, 203);
-  font-size: 0.9rem;
+  padding: 0px 18px;
+  max-width: 460px;
  
 }
 
-#check-weather-btn {
-  padding: 12px 12px;
-  background-color: rgb(39, 39, 94);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  display: block;
+.welcome {
+  align-content: center;
+   min-height: 100vh;
+}
+
+.welcome .image {
+  width: 100%;
+}
+
+.welcome .context {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  text-decoration: none;
 }
 
-#check-weather-btn:active {
-  background-color: rgb(14, 14, 65);
-  color: gray;
+.welcome .context .check-btn {
+  padding: 14px 12px;
+  border: none;
+  background-color: rgb(223, 209, 12);
+  color: rgb(61, 60, 60);
+  border-radius: 50px;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+.welcome .context .check-btn:active {
+  background-color: rgb(241, 226, 7);
+  color: rgb(68, 67, 67);
+}
+.welcome .brand {
+  font-size: 4rem;
+  background: linear-gradient(90deg, rgb(42, 42, 46), rgb(9, 43, 196));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome .sub-brand {
+  color: rgb(221, 199, 199);
+}
+
+/*main*/
+.main{
+
+  display: none;
+}
+.main.show{
+
+  display: block;
+ 
+}
+.main .content {
+  min-height: 100vh;
+}
+.main .content .image {
+  width: 100%;
+}
+
+.temp-stat {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background: #063faf;
+  text-align: center;
+  border-radius: 8px;
+  grid-column: span 2;
+}
+
+.temp {
+  font-size: 5rem;
+  font-weight: 600;
+  color: white;
+}
+#location-stat {
+  font-weight: 500;
+  color: rgb(235, 224, 224);
+  font-size: 1.5rem;
+}
+
+#date-time {
+  font-size: 1.2rem;
+  color: rgb(223, 212, 212);
+  font-weight: 500;
+}
+
+.ui-temp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.ui-temp .card {
+  padding: 15px;
+  background-color: #063faf;
+  display: fl;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: rgb(235, 214, 32);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.ui-temp .card svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.loading-screen{
+
+  min-height: 100vh;
+  align-content: center;
+  justify-items: center;
+  display: block;
+}
+.loading-screen.hide{
+
+  display: none;
+}
+
+.loader {
+  --d:22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #25b09b;
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d))      calc(1*var(--d))     0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+  animation: l27 1s infinite steps(8);
+}
+
+.loading-ani{
+
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+ align-items: center;
+
+ p{
+
+  font-weight: 500;
+  color: rgb(184, 175, 175);
+  font-size: 1.2rem;
+ }
+}
+@keyframes l27 {
+  100% {transform: rotate(1turn)}
+}
+
+@media (min-width: 769px) {
+  .container {
+    max-width: 650px;
+  }
+
+  .welcome .brand {
+    font-size: 7rem;
+  }
 }
 
 
-/*Weather Page*/
-
-
-.container{
-
-
-     max-width: 470px;
-     margin-inline: auto;
-     padding: 25px;
-}
-
-.Temp-stat{
-
-     display: flex;
-     flex-direction: column;
-     gap: 15px;
-     color: white;
-     padding: 40px;
-     background-color: #1f087562;
-     align-items: center;
-     border-radius: 10px;
-}
-
-.Temp-stat .temperature{
-
-    font-size: 5.5rem;
-    font-weight: 500;
-}
-
-
-@media (min-width:769px) {
-
-   
-
-    .container-entry{
-
-         max-width: 600px;
-    }
-      
-
-}
-
-@media (min-width:1024px){
-
-     
-     .welcome-text .header{
-
-        font-size: 2.6rem;
-       
-     }
-}
