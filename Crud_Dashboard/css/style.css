@@ -18,6 +18,9 @@ body{
 .navbrand {
 
     margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .navbrand .logo{
 
@@ -30,6 +33,13 @@ body{
 .navbrand .tag{
 
     display: none;
+    font-size: 1.4rem;
+    color: rgb(255, 166, 0);
+}
+
+.navbrand .tag.show{
+
+    display: block;
 }
 .sidebar{
 
@@ -136,10 +146,42 @@ body{
 .main{
 
     flex: 1;
+    padding: 10px;
+    max-height:100vh ;
+    overflow-y: scroll;
 }
 
 
+.product-stat{
 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+
+.product-stat .stat{
+
+    padding: 30px;
+    background-color: rgb(196, 187, 187);
+    border-radius: 4px;
+        display: flex;
+    flex-direction: column;
+    color:black;
+}
+
+.product-stat .stat .title{
+
+    font-size: 1.5rem;
+    font-weight: 500;
+
+
+}
+
+.product-stat .stat .num{
+
+     font-weight: 500;
+}
 @media(min-width:768px){
 
 
@@ -147,5 +189,6 @@ body{
 
 @media (min-width:1024px){
 
+    
 
 }
